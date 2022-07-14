@@ -1,0 +1,11 @@
+name: PRstats workflow
+on:
+  push:
+  pull_request:
+
+jobs:
+  prstats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./

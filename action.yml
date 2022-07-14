@@ -1,0 +1,6 @@
+name: "PRStats"
+description: "PRStats is an utility tool delivering metrics on pull requests."
+author: "Arthur Eichelberger"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
