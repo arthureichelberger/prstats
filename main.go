@@ -37,4 +37,5 @@ func call(req *http.Request) {
 	json.NewDecoder(res.Body).Decode(&body)
 	bodyJSON, _ := json.Marshal(body)
 	log.Info().Str("url", req.URL.RequestURI()).Str("status", res.Status).RawJSON("json", bodyJSON).Msg("request done")
+	//
 }
