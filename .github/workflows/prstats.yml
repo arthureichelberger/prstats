@@ -1,11 +1,16 @@
 name: PRstats workflow
 on:
-  push:
   pull_request:
+    types: ['closed']
 
 jobs:
   prstats:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v3
       - uses: ./
+        env:
+          PULL_REQUEST_ID: ${{ github.event.number }}
