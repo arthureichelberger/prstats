@@ -1,6 +1,7 @@
 name: PRstats workflow
 on:
   pull_request:
+    types: ['closed']
 
 jobs:
   prstats:
